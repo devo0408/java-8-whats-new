@@ -1,4 +1,4 @@
-package com.devo.m1;
+package com.devo.lambda;
 
 import java.util.function.Function;
 

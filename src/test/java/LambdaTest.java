@@ -1,5 +1,5 @@
-import com.devo.m1.Comparator;
-import com.devo.m1.Person;
+import com.devo.lambda.Comparator;
+import com.devo.lambda.Person;
 import org.junit.Test;
 
 import java.util.function.Function;
@@ -7,7 +7,7 @@ import java.util.function.Function;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
-public class M1Test {
+public class LambdaTest {
 
     @Test
     public void doTest(){
