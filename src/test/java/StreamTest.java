@@ -44,8 +44,7 @@ public class StreamTest {
         ) {
             persons = stream.map(line -> {
                 String[] s = line.split(" ");
-                Person p = new Person(s[0].trim(), Integer.parseInt(s[1]));
-                return p;
+                return new Person(s[0].trim(), Integer.parseInt(s[1]));
             }).collect(Collectors.toList());
         } catch (IOException ioe) {
             // todo handle IOException
