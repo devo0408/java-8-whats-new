@@ -2,7 +2,6 @@ import com.devo.stream.model.Person;
 import org.junit.Test;
 
 import java.io.*;
-import java.nio.charset.StandardCharsets;
 import java.util.*;
 import java.util.function.Function;
 import java.util.function.Predicate;
@@ -20,7 +19,7 @@ public class StreamTest {
 
         final String people = "Sarah 15\n" +
                 "Philip 21\n" +
-                "Beth 23 \n" +
+                "Philip 23 \n" +
                 "Simon 24\n" +
                 "Nina 23\n" +
                 "Allan 28\n" +
@@ -43,35 +42,26 @@ public class StreamTest {
                 BufferedReader reader = new BufferedReader(new StringReader(people));
                 Stream<String> stream = reader.lines()
         ) {
-            stream.map(line -> {
+            persons = stream.map(line -> {
                 String[] s = line.split(" ");
                 Person p = new Person(s[0].trim(), Integer.parseInt(s[1]));
-                persons.add(p);
                 return p;
-            });
+            }).collect(Collectors.toList());
         } catch (IOException ioe) {
             // todo handle IOException
         }
 
-        Optional<Person> opt = persons.stream().filter(p -> p.getAge() >= 20)
-                        .min(Comparator.comparing(Person::getAge));
-        System.out.println(opt);
-
-//        Optional<Person> opt2 = persons.stream().max(Person::getAge))
-//        System.out.println(opt2);
-
-        Map<Integer, String> map =
+        Map<String, Integer> filteredMap =
                 persons.stream()
+                        .filter(p -> p.getName().equals("Philip"))
                         .collect(
                                 Collectors.groupingBy(
-                                        Person::getAge,
-                                        Collectors.mapping(
-                                                Person::getName,
-                                                Collectors.joining(", ")
-                                        )
+                                        Person::getName,
+                                        Collectors.summingInt(Person::getAge)
                                 )
                         );
-        System.out.println(map);
+
+        assertTrue(filteredMap.get("Philip").equals(44));
 
     }
 
@@ -134,7 +124,7 @@ public class StreamTest {
     public void reductionTest(){
         List<Integer> list = Arrays.asList(1, 2, 3, 4, 5);
         Optional<Integer> red = list.stream().reduce(Integer::max);
-        assertTrue(red.get() == 5);
+        assertTrue(red.get().equals(5));
     }
 
 }
