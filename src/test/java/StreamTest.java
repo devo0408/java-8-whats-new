@@ -1,4 +1,4 @@
-import com.devo.stream.model.Person;
+import com.devo.stream.Person;
 import org.junit.Test;
 
 import java.io.*;

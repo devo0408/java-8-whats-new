@@ -1,4 +1,4 @@
-package com.devo.stream.model;
+package com.devo.stream;
 
 public class Person {
 

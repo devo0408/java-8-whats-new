@@ -1,4 +1,4 @@
-import com.devo.datetime.model.Person;
+import com.devo.datetime.Person;
 import org.junit.Test;
 
 import java.io.BufferedReader;

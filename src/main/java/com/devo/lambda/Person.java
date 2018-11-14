@@ -1,4 +1,4 @@
-package com.devo.lambda.model;
+package com.devo.lambda;
 
 public class Person {
 

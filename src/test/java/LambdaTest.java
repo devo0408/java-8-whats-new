@@ -1,5 +1,5 @@
 import com.devo.lambda.Comparator;
-import com.devo.lambda.model.Person;
+import com.devo.lambda.Person;
 import org.junit.Test;
 
 import java.util.function.Function;
