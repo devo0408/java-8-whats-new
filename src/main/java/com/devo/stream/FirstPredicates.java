@@ -1,4 +1,4 @@
-package com.devo.collector;
+package com.devo.stream;
 
 import java.util.function.Predicate;
 import java.util.stream.Stream;

@@ -1,9 +1,6 @@
-package com.devo.collector.model;
+package com.devo.stream.model;
 
-/**
- *
- * @author José
- */
+
 public class Person {
 
     private String name;

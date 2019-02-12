@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package com.devo.collector;
+package com.devo.stream;
 
 import java.util.ArrayList;
 import java.util.List;

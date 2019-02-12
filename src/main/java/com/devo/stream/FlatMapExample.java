@@ -1,4 +1,4 @@
-package com.devo.collector;
+package com.devo.stream;
 
 import java.util.Arrays;
 import java.util.List;

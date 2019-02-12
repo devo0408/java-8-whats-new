@@ -1,4 +1,4 @@
-package com.devo.collector;
+package com.devo.stream;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -11,7 +11,7 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-import com.devo.collector.model.Person;
+import com.devo.stream.model.Person;
 
 
 public class CollectorsExample {
