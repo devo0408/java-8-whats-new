@@ -21,12 +21,12 @@ public class CollectorsExample {
         List<Person> persons = new ArrayList<>();
         
         try (
-            BufferedReader reader = 
+                BufferedReader reader =
                 new BufferedReader(
                     new InputStreamReader(
-                        CollectorsExample.class.getResourceAsStream("/collector/people.txt")));
+                        CollectorsExample.class.getResourceAsStream("/lambda_people.txt")));
 
-            Stream<String> stream = reader.lines()
+                Stream<String> stream = reader.lines()
         ) {
 
             stream.map(line -> {

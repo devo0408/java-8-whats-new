@@ -23,8 +23,8 @@ public class MergingMaps {
         List<Person> persons = new ArrayList<>();
         
         try (
-            BufferedReader reader = new BufferedReader(new InputStreamReader(CollectorsExample.class.getResourceAsStream("/maps/people.txt")));
-            Stream<String> stream = reader.lines()
+                BufferedReader reader = new BufferedReader(new InputStreamReader(CollectorsExample.class.getResourceAsStream("/maps_people.txt")));
+                Stream<String> stream = reader.lines()
         ) {
 
             stream.map(line -> {

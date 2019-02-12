@@ -21,8 +21,8 @@ public class DataAndTime {
         List<Person> persons = new ArrayList<>();
         
         try (
-            BufferedReader reader = new BufferedReader(new InputStreamReader(CollectorsExample.class.getResourceAsStream("/datetime/people.txt")));
-            Stream<String> stream = reader.lines()
+                BufferedReader reader = new BufferedReader(new InputStreamReader(CollectorsExample.class.getResourceAsStream("/datetime_people.txt")));
+                Stream<String> stream = reader.lines()
         ) {
             
             stream.map(
